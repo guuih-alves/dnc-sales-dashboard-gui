@@ -1,9 +1,11 @@
-import { Theme } from "@types";
+//Criando o Arquivo de Temas//
+
+import { Theme } from "@/types";
 
 export const lighTheme: Theme = {
     appBackground: '#FFF',
     appColor: '#000',
-    appDefaultStroke:'#E0E0E0',
+    appDefaultStroke:'#E0E0E0',   //Cor para bordas e traços//
     appLogo: 'dnc-logo-bk.svg',
     appSkeletonFrom: '#EEE',
     appSkeletonTo: '#CCC',
