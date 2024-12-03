@@ -1,6 +1,9 @@
 import { createGlobalStyle } from "styled-components";
 import { DefaultTheme } from "styled-components";
 
+
+//No arquivo de estilos globais, podemos acessar as propriedades do tema:
+
 export const GlobalStyle = createGlobalStyle<{ theme?: DefaultTheme}>`
 body, html {
 background: ${(props) =>props.theme.appBackground};
