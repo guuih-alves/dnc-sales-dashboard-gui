@@ -9,7 +9,7 @@ import { DarkTheme, GlobalStyle, lighTheme } from './styles/'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <ThemeProvider theme={DarkTheme}>
+    <ThemeProvider theme={lighTheme}>
     <GlobalStyle/>
     <App />
 
