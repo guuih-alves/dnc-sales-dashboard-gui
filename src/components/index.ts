@@ -1,5 +1,6 @@
 export * from './BannerImage'
 export { default as Header} from './Header'
+export * from './CardComponent'
 export * from './Logo'
 export * from './StyledButton'
 export * from './StyledInput'
