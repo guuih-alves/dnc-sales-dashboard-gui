@@ -7,3 +7,6 @@ export type ListDataProps = {
 export interface AvatarsListProps{
     listData: ListDataProps[]
 }
+
+
+//arquivo de tipagem//
