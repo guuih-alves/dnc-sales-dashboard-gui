@@ -16,6 +16,8 @@ import { Line } from "react-chartjs-2";
 import { Bar } from "react-chartjs-2";
 import { CustomChartProps } from "@/types";
 
+
+  //registrar os componentes necessários do Chart.js.//
 ChartJS.register(
     CategoryScale,
     LinearScale,
@@ -27,6 +29,7 @@ ChartJS.register(
     Legend
 )
 
+//CustomChart que será responsável por renderizar diferentes tipos de gráficos//
 
 function CustomChart(props: CustomChartProps){
 
@@ -38,10 +41,10 @@ function CustomChart(props: CustomChartProps){
         scales: {
             x:{
                 border: {
-                    display: false
+                    display: false,
                 },
                 grid: {
-                    display: false
+                    display: false,
                 },
                 ticks: {
                     color: theme.typographies.subtitle
@@ -50,7 +53,7 @@ function CustomChart(props: CustomChartProps){
 
             y: {
                 border: {
-                    display: false
+                    display: false,
                 },
 
                 grid: {
@@ -58,7 +61,7 @@ function CustomChart(props: CustomChartProps){
                 },
 
                 ticks: {
-                    color: theme.typographies.subtitle
+                    color: theme.typographies.subtitle,
                 },
             },
         },
@@ -68,6 +71,10 @@ function CustomChart(props: CustomChartProps){
             },
         }
     }
+
+
+   // Os dados do gráfico precisam ser formatados de acordo com as expectativas do Chart.js://
+
 
     const chartData = {
         labels,
