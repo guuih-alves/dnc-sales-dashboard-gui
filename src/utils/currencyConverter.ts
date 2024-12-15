@@ -10,3 +10,6 @@ export function currencyConverter (value: number): string {
         currency: 'BRL',
     }). format(value)
 }
+
+
+//converter valores para o formato de moeda brasileira://
