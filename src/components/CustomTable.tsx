@@ -2,6 +2,8 @@ import styled from 'styled-components'
 import { CustomTableProps } from '@/types'
 import { pxToRem } from '@/utils'
 
+
+// overflow-x: auto para permitir rolagem horizontal em telas menores //
  const TableWrapper = styled.div`
 overflow-x: auto;
 width: 100%;
@@ -32,6 +34,10 @@ td {
         }
 }
 `
+
+
+// headers: Um array de strings para os cabeçalhos da tabela //
+//rows: Um array bidimensional de React.ReactNode para o conteúdo da tabela//
 
 function CustomTable(props: CustomTableProps){
         const { headers, rows} = props
