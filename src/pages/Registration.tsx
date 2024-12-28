@@ -30,7 +30,7 @@ function Registration() {
               </StyledUl>
             </Box>
              
-            <FormComponent input={[
+            <FormComponent inputs={[
               {type: 'email' , placeholder: 'Email'},
               {type: 'password' , placeholder: 'Senha'},
              ]} 

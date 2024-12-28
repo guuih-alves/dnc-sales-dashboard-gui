@@ -9,7 +9,7 @@ export type MessageProps = {
 }
 
 export interface FormComponentProps{
-    input: InputProps[]
+    inputs: InputProps[]
     buttons: ButtonProps[]
     message?: MessageProps
 }
