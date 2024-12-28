@@ -10,10 +10,10 @@ row-gap: ${pxToRem(16)};
 `
 
 function FormComponent(props: FormComponentProps) {
-    const { input, buttons, message} = props
+    const { inputs, buttons, message} = props
     return (
         <StyledForm>
-            {input.map((inputProps, index) => (
+            {inputs.map((inputProps, index) => (
                 <StyledInput key={index} {...inputProps} />
             ))}
 

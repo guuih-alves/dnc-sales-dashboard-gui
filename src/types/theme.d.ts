@@ -11,8 +11,8 @@ export interface Theme{
         alert: string
         alertColor: string
         alertHover: string
-        disable: string
-        disableColor: string
+        disabled: string
+        disabledColor: string
         primary: string
         primaryColor: string
         primaryHover: string
@@ -29,9 +29,9 @@ export interface Theme{
         active: string
         activeColor: string
         borderColor: string
-        disable: string
-        disableBorderColor: string
-        disableColor: string
+        disabled: string
+        disabledBorderColor: string
+        disabledColor: string
         placeholderColor: string
     }
     typographies: {

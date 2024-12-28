@@ -47,7 +47,7 @@ color: ${(props) => props.theme.buttons.alertHover};
 }
 
 &:disabled {
-background-color: ${(props) => props.theme.buttons.disabledColor};
+background-color: ${(props) => props.theme.buttons.disabled};
 color:  ${(props) => props.theme.buttons.disabledColor};
 cursor: not-allowed;
 
@@ -56,4 +56,4 @@ background-color: ${(props) => props.theme.buttons.disabledColor};
 color:  ${(props) => props.theme.buttons.disabledColor};
 }
 }
-`;
+`
