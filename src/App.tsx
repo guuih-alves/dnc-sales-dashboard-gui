@@ -9,9 +9,9 @@ function App() {
       alert('Autenticacao necessaria')
       return <Navigate to='/' replace />
     }
-
+                                            
     return <Outlet />
-
+                                     //O Outlet é um componente do React Router que é usado para renderizar componentes filhos em rotas aninhadas. 
   }
 
   return (
