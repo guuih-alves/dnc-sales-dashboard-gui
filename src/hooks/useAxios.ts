@@ -9,10 +9,10 @@ baseURL: `${import.meta.env.VITE_API_BASE_URL}/`
 
 
                         //vamos implementar a função que realizará a requisição POST:
-export const usePost = <T, P>(endpoint: string) => {
-    const [data, setData] = useState<T | null>(null);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState<number | null>(null);
+ export const usePost = <T, P>(endpoint: string) => {               // tipagem ajuda especificar tipos de variaveis (T dados de resposta, P dados a ser enviados )
+             const [data, setData] = useState<T | null>(null);     // data vai enviar os dados de resposta do post
+             const [loading, setLoading] = useState<boolean>(false);
+            const [error, setError] = useState<number | null>(null);
 
     const postData = async (postData: P, config?: AxiosRequestConfig) => {
         setData(null);
@@ -25,15 +25,15 @@ export const usePost = <T, P>(endpoint: string) => {
             method: 'POST',
             data: postData,
             headers: {
-            'Content-Type': 'application/json',
-            ...config?.headers,
+            'Content-Type':'application/json',
+            ...config?.headers
             },
-            ...config,
+            ...config
             });
             
             setData(response.data);
             } catch (e: any) {
-            setError(e.response.status ?? 500);
+            setError(e.response?.status || 500);
             } finally {
             setLoading(false);
             }

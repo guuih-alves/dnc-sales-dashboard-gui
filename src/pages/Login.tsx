@@ -1,5 +1,8 @@
 
 import { ChangeEvent, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { jwtDecode } from "jwt-decode";
+import Cookies from "js-cookie";
 
 //Componets 
 import { Box, Container, Grid } from "@mui/material";
@@ -9,12 +12,13 @@ import { BannerImage, FormComponent, Logo, StyledH1, Styledp } from "@/component
 import { useFormValidation, usePost } from "@/hooks";
 
 //Utils
-import { pxToRem } from "@/utils";
+import { pxToRem, jwtExpirationDateConverter } from "@/utils";
 
 //Types
-import { MessageProps, LoginData, LoginPostData } from "@/types";
+import { DecodeJWT, MessageProps, LoginData, LoginPostData } from "@/types";
 
 function Login() {
+  const navigate =  useNavigate();
   const inputs = [
     { type: 'email', placeholder: 'Email'},
     { type: 'password', placeholder: 'Senha'},
@@ -50,9 +54,15 @@ function Login() {
 
   useEffect(() => {
     if (data?.jwt_token){
-      console.log('DATA', data)
+      const decoded: DecodeJWT = jwtDecode(data?.jwt_token)
+      Cookies.set('Authorization', data.jwt_token, { 
+        expires: jwtExpirationDateConverter(decoded.exp),
+        secure: true,
+      })
+     
     }
-  }, [data])
+    if (Cookies.get('Authorization')) navigate('/home')
+  }, [data, navigate])
 
 
     return (
@@ -75,7 +85,7 @@ function Login() {
               type: input.type,
               placeholder: input.placeholder,
               value: formValues[index] || '',
-              onChange: (e: ChangeEvent<HTMLInputElement>) => handleChange(index, (e.target as HTMLInputElement).value)
+              onChange: (e: ChangeEvent<HTMLInputElement>) => handleChange(index, (e.target as HTMLInputElement).value),
              }))}
              
              buttons={[
