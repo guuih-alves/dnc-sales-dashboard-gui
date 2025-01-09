@@ -11,7 +11,7 @@ baseURL: `${import.meta.env.VITE_API_BASE_URL}/`
 
 
                         //vamos implementar a função que realizará a requisição POST:
- export const usePost = <T, P>(endpoint: string) => {               // tipagem ajuda especificar tipos de variaveis (T dados de resposta, P dados a ser enviados )
+ export const usePost = <T, P>(endpoint: string, withAuth?: boolean) => {               // tipagem ajuda especificar tipos de variaveis (T dados de resposta, P dados a ser enviados )
              const [data, setData] = useState<T | null>(null);     // data vai enviar os dados de resposta do post
              const [loading, setLoading] = useState<boolean>(false);
             const [error, setError] = useState<number | null>(null);
@@ -22,14 +22,19 @@ baseURL: `${import.meta.env.VITE_API_BASE_URL}/`
         setError(null);
 
         try {
+         const headers = withAuth ? {
+            'Authorization': `Bearer ${Cookies.get('Authorization')}`,
+            'Content-Type':'application/json',
+             ...config?.headers
+         }: {
+            'Content-Type':'application/json',
+            ...config?.headers
+         }
             const response = await axiosInstance({
             url: endpoint,
             method: 'POST',
             data: postData,
-            headers: {
-            'Content-Type':'application/json',
-            ...config?.headers
-            },
+            headers: headers,
             ...config
             });
             
