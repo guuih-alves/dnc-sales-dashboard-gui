@@ -10,7 +10,7 @@ import { useFormValidation, usePost } from "@/hooks";
 
 //Redux
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "@reduxjs/toolkit/query";
+import { RootState } from "@/redux";
 import { setMessage, setProfileData } from "@/redux/slices/createProfile";
 
 //types

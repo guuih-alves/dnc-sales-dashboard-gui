@@ -19,7 +19,7 @@ import { DecodeJWT, MessageProps, LoginData, LoginPostData } from "@/types";
 
 //Redux
 import { useSelector } from "react-redux";
-import { RootState } from "@reduxjs/toolkit/query";
+import { RootState } from "@/redux";
 
 function Login() {
 
