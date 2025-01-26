@@ -98,7 +98,7 @@ const inputs: InputProps[] =[
                             {
                               !leadsError && !leadsLoading && (
                                 <>
-                                          <StyledH2 className='mb-1'>Meus Leads</StyledH2>
+                                 <StyledH2 className='mb-1' id='leads-title'>Meus Leads</StyledH2>
                               {
                                 leadsData?.length ? (
                                   <CustomTable

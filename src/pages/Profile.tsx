@@ -126,8 +126,8 @@ function Profile() {
                                  }))}
                     buttons={
                       [
-                        {className: 'primary', disabled: !formValid || profileUpdateLoading, type: 'submit' , onClick: handleSubmit, children: profileUpdateLoading ? 'Aguarde...' : 'Atualizar meu perfil'},
-                        {className: 'alert', disabled: profileDeleteLoading, type: 'button' , onClick: handleDelete, children: profileDeleteLoading ? 'Aguarde...' : 'Excluir minha conta'},
+                        {className: 'primary', id:"update-profile", disabled: !formValid || profileUpdateLoading, type: 'submit' , onClick: handleSubmit, children: profileUpdateLoading ? 'Aguarde...' : 'Atualizar meu perfil'},
+                        {className: 'alert', id:"delete-profile", disabled: profileDeleteLoading, type: 'button' , onClick: handleDelete, children: profileDeleteLoading ? 'Aguarde...' : 'Excluir minha conta'},
                       ]
                     } message={updateMessage}
                                  
@@ -145,10 +145,10 @@ function Profile() {
               <Grid item xs={12} sm={6}>
                 <CardComponent>
                   <StyledH2 className='mb-1'> Definições de conta</StyledH2>
-                <StyledButton className='primary mb-1' onClick={themeContext?.toggleTheme}>
+                <StyledButton id='theme-switch' className='primary mb-1' onClick={themeContext?.toggleTheme}>
                    Trocar para tema { themeContext?.appTheme === 'light' ? 'escuro' : 'claro'}
                 </StyledButton>
-                <StyledButton className='alert' onClick={logout}>Logout</StyledButton>
+                <StyledButton className='alert' id='logout' onClick={logout}>Logout</StyledButton>
                 </CardComponent>
               </Grid>
             </Grid>

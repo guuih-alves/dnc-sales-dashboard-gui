@@ -32,7 +32,7 @@ function Home() {
               !highlightsError && (
                 <>
                   <Grid item xs={12} md={4}>
-            <CardComponent className={highlightsLoading ? 'skeleton-loading skeleton-loading-mh-1' : ''}>
+            <CardComponent id='total-sales' className={highlightsLoading ? 'skeleton-loading skeleton-loading-mh-1' : ''}>
             
             {!highlightsLoading && highlightsData && (
                   <>
@@ -51,7 +51,7 @@ function Home() {
             </Grid>
 
             <Grid item xs={12} md={4}>
-            <CardComponent className={highlightsData ? highlightsData[1].subtitle : 'skeleton-loading skeleton-loading-mh-1'}>
+            <CardComponent id='month-goals' className={highlightsData ? highlightsData[1].subtitle : 'skeleton-loading skeleton-loading-mh-1'}>
               {!highlightsLoading && highlightsData && (
                   <>
                       <StyledH2 className='mb-1'> Meta do mes</StyledH2>
@@ -69,7 +69,7 @@ function Home() {
       
 
             <Grid item xs={12} md={4}>
-            <CardComponent className={highlightsLoading ? 'skeleton-loading skeleton-loading-mh-1' : ''}>    
+            <CardComponent id='total-leads' className={highlightsLoading ? 'skeleton-loading skeleton-loading-mh-1' : ''}>    
 
               {!highlightsLoading && highlightsData && (
 
@@ -94,7 +94,7 @@ function Home() {
           <Grid item xs={12} md={7}>
             {
               !salesMonthError && (
-                <CardComponent className={salesMonthLoading ? 'skeleton-loading skeleton-loading-mh-2' : ''}>
+                <CardComponent id='month-sales-chart' className={salesMonthLoading ? 'skeleton-loading skeleton-loading-mh-2' : ''}>
                   {
                     !salesMonthLoading && salesMonthData && (
                       <>
@@ -118,7 +118,7 @@ function Home() {
               {
                 !salesStarError && (
 
-                  <CardComponent className={salesMonthLoading ? 'skeleton-loading skeleton-loading-mh-2' : ''}>
+                  <CardComponent id='sales-stars' className={salesMonthLoading ? 'skeleton-loading skeleton-loading-mh-2' : ''}>
                     {
                       !salesStartLoading && salesStarData && (
                         <>
@@ -144,7 +144,7 @@ function Home() {
           <Grid item xs={12} md={5}>
             {
               !NewsError && (
-                <CardComponent className={newsLoading ? 'skeleton-loading skeleton-loading-mh-2' : ''}>
+                <CardComponent id='news' className={newsLoading ? 'skeleton-loading skeleton-loading-mh-2' : ''}>
                 {
                   !newsLoading && newsData && (
                     <>
@@ -167,7 +167,7 @@ function Home() {
 
           {
               !salesYearsError && (
-                <CardComponent className={salesYearsLoading ? 'skeleton-loading skeleton-loading-mh-2' : ''}>
+                <CardComponent id='years-sales-chart' className={salesYearsLoading ? 'skeleton-loading skeleton-loading-mh-2' : ''}>
                   {
                     !salesYearsLoading && salesYearsData && (
                       <>
