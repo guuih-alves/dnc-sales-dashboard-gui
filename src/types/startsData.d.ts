@@ -1,4 +1,4 @@
-export interface StartsData{
-    name: string
-    value: number
+export interface StartsData {
+  name: string
+  value: number
 }

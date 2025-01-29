@@ -4,15 +4,15 @@
  * @returns The convertd text
  */
 
-export function highlightTextConverter (text: string): string {
-   switch (text) {
+export function highlightTextConverter(text: string): string {
+  switch (text) {
     case 'alert':
-        return '*Meta longe de ser batida'
+      return '*Meta longe de ser batida'
     case 'success':
-        return '*A meta do mes foi batida'
+      return '*A meta do mes foi batida'
     case 'warning':
-        return '*Falta pouco, vamos la'
+      return '*Falta pouco, vamos la'
     default:
-        return '* Sem dados no momento'
-   }
+      return '* Sem dados no momento'
+  }
 }
