@@ -1,12 +1,11 @@
 export type ListDataProps = {
-    avatar: string
-    name: string
-    subtitle: string
+  avatar: string
+  name: string
+  subtitle: string
 }
 
-export interface AvatarsListProps{
-    listData: ListDataProps[]
+export interface AvatarsListProps {
+  listData: ListDataProps[]
 }
-
 
 //arquivo de tipagem//

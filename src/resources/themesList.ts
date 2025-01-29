@@ -1,6 +1,6 @@
-import { DarkTheme, lighTheme } from "@/styles";
+import { DarkTheme, lighTheme } from '@/styles'
 
 export const themesList = [
-    {name: 'Light Theme', theme: lighTheme},
-    {name: 'Dark Theme', theme: DarkTheme},
+  { name: 'Light Theme', theme: lighTheme },
+  { name: 'Dark Theme', theme: DarkTheme },
 ]
